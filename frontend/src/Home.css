@@ -1,0 +1,4 @@
+.balance-chart-container {
+  display: flex;
+  justify-content: flex-start;
+}

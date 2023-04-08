@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar > input {
+  width: 25rem;
+  height: 1.5rem;
+  padding-left: 5px;
+}
+
+.links {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.links > * {
+  text-decoration: none;
+  color: black;
+}
+
+.links > *:hover {
+  text-decoration: none;
+  color: rgb(94, 189, 221);
+}

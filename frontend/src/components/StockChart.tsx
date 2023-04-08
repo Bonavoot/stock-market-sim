@@ -3,7 +3,7 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import * as am5stock from "@amcharts/amcharts5/stock";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
-
+import "/src/StockChart.css";
 const StockChart = () => {
   useLayoutEffect(() => {
     let root = am5.Root.new("chartdiv");
@@ -640,7 +640,15 @@ const StockChart = () => {
     };
   }, []);
 
-  return <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>;
+  return (
+    <div className="stock-chart-container">
+      <div
+        className="stock-chart"
+        id="chartdiv"
+        style={{ width: "75%", height: "450px" }}
+      ></div>
+    </div>
+  );
 };
 
 export default StockChart;
