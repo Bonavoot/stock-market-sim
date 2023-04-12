@@ -1,8 +1,11 @@
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import { useLayoutEffect } from "react";
+import "/src/BalanceChart.css";
+import { Balances } from "../pages/Balance.type";
+import BuyingPower from "./BuyingPower";
 
-const BalanceHistoryChart = () => {
+const BalanceHistoryChart = ({ balance }: Balances) => {
   useLayoutEffect(() => {
     let root = am5.Root.new("chartdiv");
     let chart = root.container.children.push(
@@ -11,6 +14,7 @@ const BalanceHistoryChart = () => {
         layout: root.horizontalLayout,
       })
     );
+
     let data = [
       {
         date: new Date(2021, 0, 1).getTime(),
@@ -41,6 +45,7 @@ const BalanceHistoryChart = () => {
         renderer: am5xy.AxisRendererX.new(root, {
           minGridDistance: 50,
         }),
+
         tooltip: am5.Tooltip.new(root, {}),
       })
     );
@@ -52,7 +57,8 @@ const BalanceHistoryChart = () => {
       })
     );
 
-    yAxis.renderer.labels.template.disabled = true;
+    // Disable y-axis labels
+    //yAxis.renderer.labels.template.setAll({ visible: false });
 
     let series = chart.series.push(
       am5xy.LineSeries.new(root, {
@@ -67,6 +73,8 @@ const BalanceHistoryChart = () => {
       })
     );
 
+    xAxis.get("renderer").labels.template.set("visible", false);
+    yAxis.get("renderer").labels.template.set("visible", false);
     series.data.setAll(data);
 
     return () => {
@@ -74,13 +82,16 @@ const BalanceHistoryChart = () => {
     };
   }, []);
   return (
-    <div className="balance-chart-container">
+    <>
       <div
         className="balance-chart"
         id="chartdiv"
-        style={{ width: "75%", height: "350px" }}
-      ></div>
-    </div>
+        style={{ width: "100%", height: "325px" }}
+      >
+        <div className="balance">{balance}</div>
+      </div>
+      <BuyingPower />
+    </>
   );
 };
 

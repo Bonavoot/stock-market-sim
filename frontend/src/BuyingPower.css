@@ -1,0 +1,8 @@
+.buying-power {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.55rem;
+  border-top: solid grey 1px;
+  border-bottom: solid grey 1px;
+  padding: 10px 25px;
+}

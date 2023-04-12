@@ -1,0 +1,13 @@
+.stock-list {
+  display: flex;
+  border: solid rgba(0, 0, 0, 0.351) 2px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2px;
+  height: 1500px;
+  width: 320px;
+  font-size: 1.2rem;
+  padding: 0;
+  overflow-y: scroll;
+  margin-top: 60px;
+}

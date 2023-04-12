@@ -4,6 +4,7 @@ import * as am5xy from "@amcharts/amcharts5/xy";
 import * as am5stock from "@amcharts/amcharts5/stock";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import "/src/StockChart.css";
+import StockDetails from "./StockDetails";
 const StockChart = () => {
   useLayoutEffect(() => {
     let root = am5.Root.new("chartdiv");
@@ -517,7 +518,6 @@ const StockChart = () => {
       am5stock.StockPanel.new(root, {
         wheelY: "zoomX",
         panX: true,
-
         panY: true,
         height: am5.percent(30),
       })
@@ -645,8 +645,9 @@ const StockChart = () => {
       <div
         className="stock-chart"
         id="chartdiv"
-        style={{ width: "75%", height: "450px" }}
+        style={{ width: "100%", height: "450px" }}
       ></div>
+      <StockDetails />
     </div>
   );
 };

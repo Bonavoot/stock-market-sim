@@ -5,14 +5,17 @@ import logo from "/src/assets/logo.png";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Link to="/stock">
+      <Link to="/">
         <img
           src={logo}
           alt="logo"
           style={{ width: "35px", marginLeft: "25px" }}
         />
       </Link>
-      <input type="text" placeholder="APPL, Apple, etc..." />
+      <div className="search">
+        <span className="material-symbols-outlined">search</span>
+        <input type="text" placeholder="APPL, Apple, etc..." />
+      </div>
       <div className="links">
         <Link to="/portfolio">PORTFOLIO</Link>
         <Link to="/account">ACCOUNT</Link>
