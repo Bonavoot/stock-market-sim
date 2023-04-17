@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.stock-card {
+  text-decoration: none;
+  padding: 1rem 0rem;
+  list-style: none;
+  padding-left: 10px;
+  margin-left: 0px;
+  border: solid rgba(128, 128, 128, 0.372) 1px;
+}

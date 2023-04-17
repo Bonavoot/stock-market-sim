@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  font-family: "Source Sans Pro", sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 5px 0px;
+  width: 100vw;
+  background-color: white;
+  z-index: 99;
+}
+
+.navbar > input {
+  width: 25rem;
+  height: 1.5rem;
+  padding-left: 5px;
+}
+
+.links {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.links > * {
+  text-decoration: none;
+  color: black;
+}
+
+.links > *:hover {
+  text-decoration: none;
+  color: rgb(94, 189, 221);
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input {
+  width: 320px;
+  height: 25px;
+  padding-left: 8px;
+}

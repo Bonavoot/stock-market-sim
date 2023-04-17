@@ -1,0 +1,13 @@
+.balance-chart {
+  position: relative;
+  margin-top: 25px;
+  width: 90%;
+  margin-right: 30px;
+}
+
+.balance {
+  position: absolute;
+  top: 5%;
+  left: 4%;
+  font-size: 24pt;
+}

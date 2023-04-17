@@ -1,0 +1,9 @@
+.stock-card > * {
+  text-decoration: none;
+  color: black;
+}
+
+.stock-card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

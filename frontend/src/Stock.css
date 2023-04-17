@@ -1,0 +1,6 @@
+.stock {
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
